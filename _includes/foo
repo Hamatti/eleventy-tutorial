@@ -1,8 +1,3 @@
----
-layout: layouts/base.njk
-templateClass: tmpl-post
----
-
 <section id="one">
   <div class="image main" data-position="center">
     <img src="{{ thumbnail }}" alt="" />

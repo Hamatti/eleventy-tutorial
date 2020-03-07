@@ -5,10 +5,36 @@ eleventyNavigation:
   order: 1
 ---
 
-<h1>Latest 3 Posts</h1>
+<section id="one">
+  <div class="image main" data-position="center">
+    <img src="images/hero.jpg" alt="" />
+  </div>
+  <div class="container">
+    <header class="major">
+      <h2>Welcome to my portfolio</h2>
+      <p>
+        This is an example website built for my tutorial series.
+      </p>
+    </header>
+    <p>
+      My real website can be found at
+      <a href="https://hamatti.org">hamatti.org</a>.
+    </p>
+  </div>
+</section>
 
-{% set postslist = collections.posts | head(-3) %}
-{% set postslistCounter = collections.posts | length %}
-{% include "postslist.njk" %}
+<!-- Two -->
+<section id="two">
+  <div class="container">
+    <h3>Recent blog posts</h3>
+    {% set postslist = collections.posts | head(-3) %} {% set postslistCounter =
+    collections.posts | length %} {% include "postslist.njk" %}
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+    <p>
+      More posts can be found in
+      <a href="{{ '/posts/' | url }}">the archive</a>.
+    </p>
+  </div>
+</section>
+
+{% include 'skills.njk' %}

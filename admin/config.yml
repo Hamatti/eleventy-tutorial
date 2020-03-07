@@ -19,3 +19,14 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "skills"
+    label: "Skills"
+    folder: "skills"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "tags", name: "tags", widget: "hidden", default: "skills" }
+      - { label: "Public", name: "public", widget: "boolean" }

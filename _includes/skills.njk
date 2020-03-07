@@ -1,0 +1,23 @@
+<section id="three">
+  <div class="container">
+    <h3>My skills</h3>
+    <p>
+      I'm a talented web developer and teacher.
+    </p>
+    <div class="features">
+      {% for skill in collections.skills %} {% if skill.data.public %}
+      <article>
+        <a href="#" class="image"
+          ><img src="images/{{ skill.data.image }}" alt=""
+        /></a>
+        <div class="inner">
+          <h4>{{ skill.data.title }}</h4>
+          <p>
+            {{ skill.data.description }}
+          </p>
+        </div>
+      </article>
+      {% endif %} {% endfor %}
+    </div>
+  </div>
+</section>
